@@ -1,168 +1,245 @@
-/****************** GENERELT ******************/
+/* ****************** GENERELT ****************** */
 
-/* reset */
+:root {
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+
+  /* Farver */
+  --primary: #b4d7ff;
+  --secondary: #2273f3;
+  --tertiary: #ffffff;
+  --quarternary: #151515;
+  --accent: #ff8630;
+
+  /* Fonte */
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+}
+
+html {
+  background-color: var(--primary);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* billeder */
 img {
   width: 100%;
 }
 
-/* Spacing */
-:root {
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 3rem;
+h1,
+h2,
+h3 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-style: normal;
 }
 
-/****************** MENU ******************/
+h1 {
+  font-size: 4.8rem;
+  color: var(--secondary);
+  margin-top: var(--space-md);
+}
 
-/* Generelle stilarter */
+h2,
+h3 {
+  color: var(--quarternary);
+  margin-bottom: var(--space-xs);
+}
+
+p {
+  font-family: var(--font-secondary);
+  font-weight: 350;
+  font-size: 1rem;
+  max-width: 35ch;
+  margin-bottom: var(--space-sm);
+}
+
+a {
+  font-family: var(--font-secondary);
+}
+
+.knap {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+main {
+  margin: var(--space-sm);
+}
+
+/* ****************** MENU ****************** */
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--secondary);
+}
+
 header .logo a {
-  color: #333333;
+  color: var(--tertiary);
   font-size: 1rem;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 header .logo a:hover {
-  color: #ffffff;
-}
-
-header {
-  position: sticky; /* Fast på toppen ved scroll */
-  top: 0; /* Fastgør til toppen */
-  display: flex; /* Flexbox layout */
-  justify-content: space-between; /* Plads mellem logo og menu */
-  align-items: center; /* Vertikal centrering */
-  padding: 20px; /* Indre afstand */
-  background-color: #998fc7; /* Baggrundsfarve */
+  color: var(--accent);
 }
 
 .logo img {
-  width: 50px; /* Logo bredde */
-  height: 50px; /* Logo højde */
+  width: 50px;
+  height: 50px;
 }
 
 nav {
-  display: flex; /* Flexbox til menuen */
-  align-items: center; /* Centrerer menuen vertikalt */
+  display: flex;
+  align-items: center;
 }
 
 .menu {
-  display: flex; /* Horisontal menu */
-  list-style: none; /* Fjerner punktopstilling */
+  display: flex;
+  list-style: none;
 }
 
 .menu li {
-  margin-right: 20px; /* Afstand mellem menupunkter */
-  position: relative; /* Nødvendigt for at placere dropdownen korrekt */
+  margin-right: 20px;
 }
 
 .menu li:last-child {
-  margin-right: 0; /* Ingen afstand på sidste punkt */
+  margin-right: 0;
 }
 
 .menu a {
-  display: block; /* Klikbart område */
-  padding: 10px; /* Indre afstand */
-  color: #333333; /* Tekstfarve */
-  text-decoration: none; /* Ingen understregning */
-  transition: color 0.3s; /* Glidende farveskift */
-  text-align: end; /* Justerer teksten til slutningen af containeren */
+  display: block;
+  padding: 10px;
+  color: var(--tertiary);
+  text-decoration: none;
+  text-align: end;
+  transition: color 0.3s;
 }
 
 .menu a:hover {
-  color: #f0f0f0; /* Lys farve ved hover */
+  color: var(--accent);
 }
 
-/* Buger-menu */
 .burger {
-  display: none; /* Skjult som standard */
+  display: none;
   width: 30px;
   height: 20px;
-  cursor: pointer; /* Klikbart */
+  cursor: pointer;
 }
 
 .burger .line {
-  width: 100%; /* Linjebredde */
-  height: 2px; /* Linjehøjde */
-  background-color: #333333; /* Linjefarve */
-  margin-bottom: 5px; /* Afstand mellem linjer */
-  transition: 0.2s linear; /* Glidende effekt */
+  width: 100%;
+  height: 2px;
+  background-color: var(--tertiary);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
 }
 
-/* Responsiv menu */
 @media screen and (max-width: 600px) {
   .menu {
-    display: none; /* Skjul menu på små skærme */
+    display: none;
   }
 
   .burger {
-    display: block; /* Vis burger-menu */
+    display: block;
   }
 
   .burger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px); /* Øverste linje roteret */
+    transform: rotate(45deg) translate(5px, 5px);
   }
 
   .burger.active .line:nth-child(2) {
-    opacity: 0; /* Midterste linje skjult */
+    opacity: 0;
   }
 
   .burger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px); /* Nederste linje roteret */
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   nav.active .menu {
-    display: block; /* Vis menu ved klik */
-    background-color: #998fc7; /* Samme baggrundsfarve som header */
-    position: absolute; /* Flydende layout */
-    top: 60px; /* Placering under header */
+    display: block;
+    background-color: var(--secondary);
+    position: absolute;
+    top: 60px;
     left: 0;
-    width: 100%; /* Fylder hele bredden */
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Skygge */
-    z-index: 1; /* Forgrund */
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
   nav.active .menu li {
-    margin: 10px 20px; /* Afstand i den responsiv menu */
+    margin: 10px 20px;
   }
 
   nav.active .menu a {
-    font-size: 1rem; /* Større tekst i responsiv menu */
+    font-size: 1rem;
   }
 }
 
-/****************** FORSIDE ******************/
+/* ****************** FORSIDE ****************** */
 
-/****************** PORTFOLIO ******************/
-
-main {
-  margin-left: var(--space-sm); /* lille margin på venstre side */
-  margin-right: var(--space-sm); /* lille margin på højre side */
+.knap {
+  display: inline-flex; /* knappen tilpasser sin bredde til sit indhold (teksten).*/
+  align-items: center;
+  color: var(--tertiary);
+  background-color: var(--accent);
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-h1 {
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-xs);
+.knap a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.præsentation p {
+.knap .pil {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid var(--tertiary);
+  border-bottom: 2px solid var(--tertiary);
+  transform: rotate(-45deg);
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.knap:hover {
+  background-color: var(--quarternary);
+  transform: scale(1.05);
+}
+
+.knap:hover .pil {
+  transform: rotate(-45deg) translate(4px, 4px);
+}
+
+/* ****************** PORTFOLIO ****************** */
+
+/* .præsentation p {
   margin-bottom: var(--space-lg);
 }
 
 .line2 {
-  border: 0; /* Fjerner standardborder */
-  border-top: 2px solid #333; /* Laver en vandret streg med 2px tykkelse */
-  width: 100%; /* Gør linjen lige så bred som containeren */
-  margin: 0 auto; /* Centrerer linjen horisontalt. auto tildeler automatisk lige margin på venstre og højre side, hvilket centrerer elementet. */
-  margin-bottom: var(--space-sm);
+  border: 0;
+  border-top: 2px solid #333;
+  width: 100%;
+  margin: 0 auto var(--space-sm);
 }
 
 .projekt h2,
@@ -175,15 +252,14 @@ p,
 
 .projekt {
   margin-bottom: var(--space-lg);
-}
+} */
 
-.knap {
-  background-color: #d4c2fc;
-  padding: 10px; /* Afstand mellem billede og ramme */
-  border: 3px solid #f9f5ff; /* Ramme omkring billedet */
-  border-radius: 10px; /* Afrundede hjørner */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skyggeeffekt */
-  width: 40%;
-  text-align: center;
-  margin-bottom: var(--space-sm);
+.projekt {
+  margin-bottom: var(--space-lg);
+}
+.line2 {
+  border: 0;
+  border-top: 1px solid var(--accent);
+  width: 100%;
+  margin: 0 auto var(--space-sm);
 }
