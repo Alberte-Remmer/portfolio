@@ -6,6 +6,7 @@
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 3rem;
+  --space-xl: 5rem;
 
   /* Farver */
   --primary: #b4d7ff;
@@ -231,7 +232,7 @@ nav {
 
 /* ****************** PORTFOLIO ****************** */
 
-.linie {
+.linje {
   border: 0;
   border-top: 1px solid var(--accent);
   width: 100%;

@@ -1,4 +1,50 @@
-main {
-  max-width: 1200px;
-  margin-inline: auto;
+@media (min-width: 1024px) {
+  /* Generelt */
+  main {
+    margin: var(--space-lg);
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  h1 {
+    font-size: 14rem;
+    font-weight: 400;
+  }
+
+  /* Forside */
+
+  #knap {
+    position: absolute;
+    width: 40%;
+    aspect-ratio: 2/0;
+    top: 14%;
+    left: 51%;
+    cursor: pointer;
+  }
+
+  /* Portfolio */
+
+  .linje {
+    width: 90%;
+    margin-bottom: var(--space-sm); /* Margen forneden */
+    margin-left: 0;
+  }
+  details p {
+    max-width: 65ch;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: var(--space-xl);
+  }
+  img {
+    max-width: 500px;
+  }
+  .flex {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display: flex; /* Gør .box-2 til en flex-container */
+    justify-content: center; /* Centrerer indholdet vandret (fra venstre til højre) */
+  }
 }
