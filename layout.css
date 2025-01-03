@@ -11,15 +11,26 @@
     font-weight: 400;
   }
 
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    max-width: 45ch;
+  }
+
   /* Forside */
 
-  #knap {
+  #ide {
     position: absolute;
     width: 40%;
     aspect-ratio: 2/0;
-    top: 14%;
+    top: 12%;
     left: 51%;
-    cursor: pointer;
+  }
+  .box {
+    margin-left: 7rem;
+    margin-top: 1rem;
   }
 
   /* Portfolio */

@@ -230,6 +230,14 @@ nav {
   transform: rotate(-45deg) translate(4px, 4px);
 }
 
+#ide {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 2/0;
+  top: 34%;
+  left: 35%;
+}
+
 /* ****************** PORTFOLIO ****************** */
 
 .linje {
