@@ -231,7 +231,7 @@ nav {
 
 /* ****************** PORTFOLIO ****************** */
 
-.line {
+.linie {
   border: 0;
   border-top: 1px solid var(--accent);
   width: 100%;
@@ -255,4 +255,8 @@ summary {
 summary:hover {
   text-decoration: none;
   color: var(--accent); /* Giver en hover-effekt med accentfarven */
+}
+
+details p {
+  max-width: 45ch;
 }
