@@ -231,35 +231,28 @@ nav {
 
 /* ****************** PORTFOLIO ****************** */
 
-/* .præsentation p {
-  margin-bottom: var(--space-lg);
-}
-
-.line2 {
-  border: 0;
-  border-top: 2px solid #333;
-  width: 100%;
-  margin: 0 auto var(--space-sm);
-}
-
-.projekt h2,
-img,
-h3,
-p,
-.knap {
-  margin-bottom: var(--space-xs);
-}
-
-.projekt {
-  margin-bottom: var(--space-lg);
-} */
-
-.projekt {
-  margin-bottom: var(--space-lg);
-}
-.line2 {
+.line {
   border: 0;
   border-top: 1px solid var(--accent);
   width: 100%;
   margin: 0 auto var(--space-sm);
+}
+
+details {
+  margin-bottom: var(--space-sm); /* Giver samme spacing som andre elementer */
+  background-color: var(--primary); /* Hvid baggrund som kontrast */
+}
+
+summary {
+  font-family: var(--font-primary); /* Matcher dine overskrifter */
+  font-weight: 600;
+  font-size: 1.2rem; /* Lidt større tekst */
+  cursor: pointer;
+  color: var(--secondary); /* Samme blå som andre links */
+  margin-bottom: var(--space-xs); /* Ensartet spacing under summary */
+}
+
+summary:hover {
+  text-decoration: none;
+  color: var(--accent); /* Giver en hover-effekt med accentfarven */
 }
