@@ -15,6 +15,10 @@
     font-size: 3rem;
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
+
   p {
     max-width: 45ch;
   }
@@ -66,5 +70,22 @@
   .billede {
     grid-column: 1/3;
     grid-row: 1/3;
+  }
+  /* CV */
+
+  .tekst {
+    max-width: 65ch;
+  }
+  .flex2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex; /* Gør .box-2 til en flex-container */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .mellemrum {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
   }
 }

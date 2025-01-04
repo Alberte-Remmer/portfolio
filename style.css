@@ -54,12 +54,17 @@ h3 {
   margin-bottom: var(--space-xs);
 }
 
-p {
+p,
+ul {
   font-family: var(--font-secondary);
   font-weight: 350;
   font-size: 1rem;
   max-width: 35ch;
   margin-bottom: var(--space-sm);
+}
+
+ul {
+  list-style-position: inside; /* Justér punkterne inden for marginen */
 }
 
 a {
@@ -141,6 +146,7 @@ nav {
   width: 30px;
   height: 20px;
   cursor: pointer;
+  z-index: 101; /* Sørg for, at burger-menuen er foran */
 }
 
 .burger .line {
@@ -177,7 +183,7 @@ nav {
     background-color: var(--secondary);
     position: absolute;
     top: 60px;
-    left: 0;
+    right: 0;
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -276,4 +282,29 @@ details p {
 
 .emnesite {
   border-radius: 20px;
+}
+
+/**** CV ****/
+
+.tekst {
+  max-width: 45ch;
+}
+
+ul {
+  list-style-type: none; /* Fjern de normale punkttegn */
+}
+
+.liste {
+  font-size: 18px; /* Større skrift */
+  color: var(--quarternary); /* Mørk tekstfarve */
+  background-color: var(--tertiary); /* Lys baggrund */
+  padding: 10px; /* Indre afstand omkring tekst */
+  margin-bottom: 5px; /* Lidt afstand mellem hvert punkt */
+  border-radius: 5px; /* Runde hjørner på hver listepost */
+  transition: background-color 0.3s ease; /* Smidig overgang ved hover */
+  border: 2px solid var(--secondary);
+}
+
+.liste:hover {
+  background-color: #e0e0e0; /* Ændre baggrundsfarve, når man holder musen over */
 }
