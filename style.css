@@ -269,3 +269,7 @@ summary:hover {
 details p {
   max-width: 45ch;
 }
+
+.emnesite {
+  border-radius: 20px;
+}
