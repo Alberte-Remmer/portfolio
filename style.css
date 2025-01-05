@@ -204,6 +204,7 @@ footer {
   color: var(--tertiary); /* Hvid tekst */
   padding: 20px;
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 
 .grid2_1-1 {
@@ -385,6 +386,7 @@ details p {
 .ikoner {
   margin-bottom: var(--space-md);
 }
+
 /**** CV ****/
 
 .tekst {
