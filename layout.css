@@ -117,4 +117,12 @@
     margin-top: var(--space-lg);
     margin-bottom: var(--space-md);
   }
+
+  .ikoner {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .details {
+    grid-column: 1/3;
+  }
 }

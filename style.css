@@ -198,6 +198,31 @@ nav {
   }
 }
 
+/******************** FOOTER *******************/
+footer {
+  background-color: var(--secondary); /* Blå baggrund */
+  color: var(--tertiary); /* Hvid tekst */
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.grid2_1-1 {
+  display: flex; /* Brug Flexbox til at arrangere elementerne horisontalt */
+  justify-content: space-between; /* Placer venstre og højre sektion adskilt */
+}
+
+.footer_navn,
+.footer_kontakt {
+  display: flex;
+  flex-direction: column; /* Sørger for at teksten i hver sektion står vertikalt */
+}
+
+.footer_navn p,
+.footer_kontakt p {
+  margin: 0; /* Fjerner margin omkring tekst */
+  font-size: 1rem; /* Justerer tekststørrelsen */
+}
+
 /* ****************** FORSIDE ****************** */
 
 .knap {
@@ -301,6 +326,26 @@ nav {
   color: var(--secondary);
 }
 
+.slideshow-container {
+  width: 100%;
+  max-width: 600px; /* Du kan ændre størrelsen på slideshowet */
+  margin-left: 0; /* Placerer containeren til højre */
+  margin-right: auto; /* Ingen margin til højre */
+  position: relative;
+}
+
+/* Skjul billederne, indtil de skal vises */
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 10px; /* Runde hjørner på billeder */
+}
+
+/* Vis det første billede */
+.slide:first-child {
+  display: block;
+}
+
 /* ****************** PORTFOLIO ****************** */
 
 .linje {
@@ -337,6 +382,9 @@ details p {
   border-radius: 20px;
 }
 
+.ikoner {
+  margin-bottom: var(--space-md);
+}
 /**** CV ****/
 
 .tekst {
