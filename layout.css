@@ -37,6 +37,35 @@
     margin-top: 1rem;
   }
 
+  .stribe {
+    top: 100%;
+    width: 80%; /* Striben fylder hele bredden */
+    height: 50px; /* Justér højden på striben */
+  }
+
+  .tidslinje-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tidslinje til venstre og tekst til højre */
+    gap: 100px; /* Afstand mellem kolonnerne */
+    align-items: start;
+    padding: 20px;
+    margin-top: 15rem;
+  }
+
+  .tidslinje-tekst p {
+    max-width: 51ch;
+  }
+
+  .tidslinje-tekst {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .tidslinje-punkter {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
   /* Portfolio */
 
   .linje {

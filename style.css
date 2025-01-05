@@ -248,6 +248,59 @@ nav {
   left: 35%;
 }
 
+.stribe {
+  position: absolute;
+  top: 90%;
+  width: 92%; /* Striben fylder hele bredden */
+  height: 30px; /* Justér højden på striben */
+  background-color: var(--tertiary); /* Hvid farve */
+}
+
+.tidslinje-container {
+  margin-top: 17rem;
+}
+
+.tidslinje-tekst {
+  text-align: left;
+}
+
+.tidslinje-tekst h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.tidslinje-tekst p {
+  font-size: 1rem;
+  max-width: 40ch;
+}
+
+.tidslinje-punkter {
+  border-left: 3px solid var(--secondary); /* Lodret linje til tidslinjen */
+}
+
+.tidslinje-tema {
+  position: relative;
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-sm);
+}
+
+.tidslinje-tema::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: var(--secondary); /* Cirkelens farve */
+  border-radius: 50%; /* Gør det til en cirkel */
+  border: 3px solid var(--tertiary);
+}
+
+.tidslinje-tema h3 {
+  margin-bottom: var(--space-xs);
+  color: var(--secondary);
+}
+
 /* ****************** PORTFOLIO ****************** */
 
 .linje {
