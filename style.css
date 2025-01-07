@@ -376,6 +376,13 @@ details p {
   margin-bottom: var(--space-md);
 }
 
+/* Sørg for at video fylder hele containeren */
+.video-container video {
+  width: 100%; /* Fylder containerens bredde */
+  height: 100%; /* Fylder containerens højde */
+  border-radius: 20px;
+}
+
 /**** CV ****/
 
 .tekst {
