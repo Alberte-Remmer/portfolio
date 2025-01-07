@@ -396,7 +396,3 @@ ul {
   transition: background-color 0.3s ease; /* Smidig overgang ved hover */
   border: 2px solid var(--secondary);
 }
-
-.liste:hover {
-  background-color: #e0e0e0; /* Ændre baggrundsfarve, når man holder musen over */
-}
